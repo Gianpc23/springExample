@@ -5,8 +5,6 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import spring4.Coche;
-
 public class Main5 {
 	private static ApplicationContext context = null;
 
@@ -17,5 +15,11 @@ public class Main5 {
 	public static void main(String[] args) {
 		List<String> listaStrings = context.getBean("listaStrings",List.class);
 		System.out.println(listaStrings);
+		
+		Colecciones colecciones = context.getBean("colecciones",Colecciones.class);
+		System.out.println(colecciones.getConjuntoStrings());
+		System.out.println(colecciones.getListaString());
+		System.out.println(colecciones.getMapaStrings());
+		System.out.println(colecciones.getMapaCoches());
 	}
 }

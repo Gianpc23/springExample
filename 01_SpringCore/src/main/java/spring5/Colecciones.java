@@ -8,6 +8,10 @@ public class Colecciones {
 	private List<String> listaString;
 	private Set<String> conjuntoStrings;
 	private Map<Integer,String> mapaStrings;
+	private List<Coche> listaCoches;
+	private Map<Integer,Coche> mapaCoches;
+	
+	public Colecciones() {}
 	
 	public List<String> getListaString() {
 		return listaString;
@@ -32,6 +36,22 @@ public class Colecciones {
 	public String toString() {
 		return "Colecciones [listaString=" + listaString + ", conjuntoStrings=" + conjuntoStrings + ", mapaStrings="
 				+ mapaStrings + "]";
+	}
+
+	public List<Coche> getListaCoches() {
+		return listaCoches;
+	}
+
+	public void setListaCoches(List<Coche> listaCoches) {
+		this.listaCoches = listaCoches;
+	}
+
+	public Map<Integer,Coche> getMapaCoches() {
+		return mapaCoches;
+	}
+
+	public void setMapaCoches(Map<Integer,Coche> mapaCoches) {
+		this.mapaCoches = mapaCoches;
 	}
 	
 }

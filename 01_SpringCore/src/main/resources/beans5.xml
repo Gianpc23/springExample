@@ -42,13 +42,37 @@
 				<entry key="2" value="Ernion"></entry>
 			</map>
 		</property>
-		
+
 		<property name="listaCoches">
-			<list value-type="spring5.Coche"></list>
+			<list value-type="spring5.Coche">
+				<bean class="spring5.Coche">
+					<property name="marca" value="Peugeot"></property>
+					<property name="modelo" value="309"></property>
+					<property name="matricula" value="3456-CWS"></property>
+				</bean>
+			</list>
 		</property>
-		
-		
+
+		<property name="mapaCoches">
+			<map key-type="java.lang.Integer" value-type="spring5.Coche">
+				<entry key="1">
+					<bean class="spring5.Coche">
+						<property name="marca" value="Ferrari"></property>
+						<property name="modelo" value="Testarosa"></property>
+						<property name="matricula" value="1234-ABC"></property>
+					</bean>
+				</entry>
+				<entry key="2" value-ref="renault"></entry>
+			</map>
+		</property>
 	</bean>
+
+	<bean id="renault" class="spring5.Coche">
+		<property name="marca" value="Renault"></property>
+		<property name="modelo" value="Megane"></property>
+		<property name="matricula" value="1234-ABC"></property>
+	</bean>
+
 
 
 </beans>
