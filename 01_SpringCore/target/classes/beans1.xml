@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="mensaje1" class="spring1.Mensaje"></bean>
+	<!-- Cada etiqueta bean es un objeto en Spring y por defecto el scope
+	o alcance o cliclo de vida va a ser Singleton -->
+	<bean id="mensaje2" class="spring1.Mensaje">
+		<property name="id" value="1"></property>
+		<property name="cuerpo" value="Este es el cuerpo!!"></property>
+		<property name="firma" value="Gian"></property>
+	</bean>
+	<bean id="mensaje3" class="spring1.Mensaje">
+		<property name="id" value="2"></property>
+		<property name="cuerpo" value="Este es el cuerpo 222!!"></property>
+		<property name="firma" value="GianPerez"></property>
+	</bean>
+</beans>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="coche" class="spring4.Coche" scope="singleton">
+		<constructor-arg index="0" value="Peugeot"></constructor-arg>
+		<constructor-arg index="1" value="309"></constructor-arg>
+		<constructor-arg index="2" value="1234-CWX"></constructor-arg>
+	</bean>
+
+	<bean id="listaStrings" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="java.lang.String">
+				<value>Harry Potter</value>
+				<value>ernion</value>
+				<value>Ron</value>
+				<value>griffindor</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="colecciones" class="spring5.Colecciones">
+		<property name="listaString">
+			<list value-type="java.lang.String">
+				<value>Harry Potter</value>
+				<value>ernion</value>
+				<value>Ron</value>
+				<value>griffindor</value>
+			</list>
+		</property>
+		<property name="conjuntoStrings">
+			<set value-type="java.lang.String">
+				<value>Harry Potter</value>
+				<value>Harry Potter</value>
+				<value>Harry Potter</value>
+			</set>
+		</property>
+		<property name="mapaStrings">
+			<map key-type="java.lang.Integer" value-type="java.lang.String">
+				<entry key="1" value="Harry Potter"></entry>
+				<entry key="2" value="Ernion"></entry>
+			</map>
+		</property>
+		
+		<property name="listaCoches">
+			<list value-type="spring5.Coche"></list>
+		</property>
+		
+		
+	</bean>
+
+
+</beans>
