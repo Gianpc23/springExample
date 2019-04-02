@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Autowire == Autocableado == Autoinyeccion
+		Es una caracteristica que trata de inyectar una 
+		dependencia a otro objeto de manera automatica.
+		Cuando utilizamos el Autowire, Spring tratara de 
+		inyectar un objeto a otro acorde a sus necesidades.
+		2 tipos importantes: 
+			- ByType: Inyectara un objeto segun el tipo.
+			- ByName: Inyectara un objeto segun el id o nombre.
+	 -->
+	 <bean id="persona" class="spring6.Persona" autowire="byName">
+	 	<property name="nombre" value="Nicolas Cage"></property>
+	 	<property name="edad" value="55"></property>
+	 	<property name="peso" value="80"></property>
+	 	<!-- Añadido la direccion de debajo debido al autowire -->
+	 </bean>
+	 
+	 <bean id="direccion2" class="spring6.Direccion">
+	 	<property name="nombreVia" value="Diamante"></property>
+	 	<property name="tipoVia" value="Calle"></property>
+	 	<property name="cp" value="28224"></property>
+	 </bean>
+	 <bean id="direccion" class="spring6.Direccion">
+	 	<property name="nombreVia" value="Gran via"></property>
+	 	<property name="tipoVia" value="Calle"></property>
+	 	<property name="cp" value="28054"></property>
+	 </bean>
+	 
+</beans>

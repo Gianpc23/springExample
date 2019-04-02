@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="d1" class="ejercicioCasa.Direccion">
+		<property name="nombreVia" value="Gran via"></property>
+		<property name="tipoVia" value="Calle"></property>
+		<property name="cp" value="28046"></property>
+	</bean>
+	<bean id="p1" class="ejercicioCasa.Persona">
+		<property name="nombre" value="Gian"></property>
+		<property name="altura" value="1.70"></property>
+		<property name="edad" value="22"></property>
+		<property name="dir" ref="d1"></property>
+	</bean>
+	<bean id="p2" class="ejercicioCasa.Persona">
+		<property name="nombre" value="Gian2"></property>
+		<property name="altura" value="1.80"></property>
+		<property name="edad" value="20"></property>
+	</bean>
+	<bean id="h1" class="ejercicioCasa.Habitacion">
+		<constructor-arg index="0" value="30.5"></constructor-arg>
+		<constructor-arg index="1" value="Cocina"></constructor-arg>
+	</bean>
+	<bean id="h2" class="ejercicioCasa.Habitacion">
+		<constructor-arg index="0" value="80.5"></constructor-arg>
+		<constructor-arg index="1" value="Salon"></constructor-arg>
+	</bean>
+
+	<!-- <bean id="habitaciones" class=""> </bean> -->
+
+
+</beans>
